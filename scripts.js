@@ -21,6 +21,7 @@ imprime (anosDeVida);
 // ESTRUTURAS CONDICIONAIS
 // OPERADORES CONDICIONAIS: >, <, >=, <=, == (igual a), !=
 // OPERADORES LÓGICOS: && (E), || (OU), ! (NEGAÇÃO)
+imprime("                    ");
 imprime ("-------- IF --------");
 if (idade < 18) {
     imprime("É menor de idade")
@@ -38,6 +39,7 @@ if (idade < 16) {
     imprime("Voto Obrigatório.")
 }
 
+imprime("                    ");
 imprime("-------- WHILE --------");
 let cont = 1;
 while (cont < 10) {
@@ -48,9 +50,47 @@ while (cont < 10) {
 let dinheiro = 43;
 let preco = 6;
 
-while (dinheiro > preco) {
-    imprime( "Comprei um salgado")
+while (dinheiro >= preco) {
+    imprime( "Comprei um salgado");
+    dinheiro = dinheiro - preco;
 }
+
+imprime("                    ");
+imprime("-------- FOR --------");
+for (let i = 1; i < 10; i++) {
+    imprime (i);
+}
+
+// FUNÇÕES
+imprime("                    ");
+imprime("-------- FUNÇÕES --------");
+function somar(num1, num2) {
+    let resultado = num1 + num2;
+
+    return resultado;
+}
+
+// chamando a função
+
+let conta = somar(10,30);
+conta = somar(conta, 21)
+imprime(conta);
+
+// FRUTAS
+imprime("                    ");
+imprime("-------- VETORES --------");
+let frutas = ["abacate", "bergamota", "carambola", "damasco"];
+
+console.log(frutas);
+
+let primeiro = frutas[0];
+console.log( "Primeiro:", primeiro)
+let segundo = frutas[1];
+console.log( "Segundo:", segundo)
+let tam = frutas.length;
+console.log(tam);
+let ultimo = frutas[tam - 1];
+console.log( "Ultimo:", terceiro)
 
 
 
