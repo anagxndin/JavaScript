@@ -81,10 +81,52 @@
 // let objeto = JSON.parse( texto );
 // console.log(objeto);
 
-let nomeSerie = document.querySelector("#nomeSerie")
-let poster = document.querySelector("#poster")
-let fotos = document.querySelector("#fotos")
-let galeriaposter = document.querySelector("#galeriaposter")
-let episodios = document.querySelector("#episodios")
 
-nomeSerie.innerHTML = 
+// EXIBIR O NOME DA SÉRIE, O RESUMO E A NOTA
+
+let nome = document.querySelector("#nome");
+nome.innerHTML = bd.nome;
+
+let resumo = document.querySelector("#resumo");
+resumo.innerHTML = bd.resumo;
+
+document.querySelector("#nota").innerHTML = bd.nota;
+
+// EXIBIR O POSTER DA SÉRIE
+
+let poster = document.querySelector("#poster");
+poster.innerHTML = `<img src ="${bd.fotoPoster}" width="200" />`;
+
+// EXIBA TODOS OS GENEROS
+
+let generos = document.querySelector("#generos");
+for (let i = 0; i < bd.generos.length; i++) {
+    generos.innerHTML += bd.generos[i] + "<br/>";
+}
+
+// EXIBA A FOTO DE TODOS OS ATORES DA SÉRIE
+
+let i;
+let atores = document.querySelector("#atores");
+for (let i = 0; i < bd.elenco.length; i++) {
+    atores.innerHTML += `<img src="${bd.elenco[i].foto}" width="100"/>`
+}
+
+
+// EXIBA O POSTER DE CADA TEMPORADA E O NÚMERO DE EPISÓDIOS, abaixo do poster
+
+let temporadas = document.querySelector("#temporadas");
+for (let temp of bd.temporadas) {
+    temporadas.innerHTML += `
+        <img src="${temp.poster}" width="100"/> <br />
+        ${temp.numero_episodios}<br />
+    `;
+}
+
+// LISTE O NOME DE CADA UM DOS EPISODIOS DA SEGUNDA TEMPORADA
+
+let episodios = document.querySelector("#episodios");
+for (let ep of bd.temporadas[1].episodios) {
+    episodios.innerHTML += ep.nome + "<br />";
+
+}
