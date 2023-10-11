@@ -1,0 +1,80 @@
+<!-- assincrona/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Assíncrona</title>
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #efefef;
+        }
+        .pais{
+            background-color: #c67e7e;
+            padding: 2em;
+            margin: 2em;
+            border-radius: 0.5em;
+            box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+        }
+        .bandeira{
+            text-align: center;
+        }
+        .bandeira img{
+            max-width: 400px;
+        }
+        h1{
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .infoLinha{
+            padding: 0.5em 0;
+        }
+        .infoNome{
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100px;
+            display: inline-block;
+        }
+
+        .form {
+            margin: 0;
+            text-align: 100;
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="form">
+        <input type="text" id="txtPais" placeholder="buscar por pais "/>
+        <button id="btnBuscar">Buscar</button>
+
+    </div>
+    <div class="pais">
+        <div class="bandeira">
+            <img src="" id="imgBandeira" />
+        </div>
+
+        <h1>nome do país</h1>
+
+        <div id="info">
+            <div class="infoLinha">
+                <span class="infoNome">Capital</span>
+                <span class="infoValor">Brasilia</span>
+                
+            </div>
+            
+
+        </div>
+
+
+    </div>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>
